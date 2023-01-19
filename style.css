@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  /* Primary */
+  --oft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /*Neutral */
+  --dark-blue-mainBg: hsl(217, 54%, 11%); /*(main BG)*/
+  --dark-blue-cardBg: hsl(216, 50%, 16%); /*(card BG)*/
+  --dark-blue-line: hsl(215, 32%, 27%); /*(line)*/
+  --white: hsl(0, 0%, 100%);
+}
+
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  color: var(--white);
+  font-size: 18px;
+  color: var(--oft-blue);
+  font-family: "Outfit", sans-serif;
+  background-color: var(--dark-blue-mainBg);
+}
+body {
+  background-color: var(--dark-blue-mainBg);
+}
+.card {
+  height: 32em;
+  width: 20em;
+  background-color: var(--dark-blue-cardBg);
+  border-radius: 0.6em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-container {
+  padding: 2em;
+}
+/* .card-image {
+  height: 100%;
+  width: auto;
+} */
+
+.card-image .img-product {
+  border-radius: 0.6em;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlayPar {
+  position: relative;
+}
+
+.imgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 255, 247, 0.4);
+  display: none;
+  border-radius: 0.6em;
+}
+
+.imgOverlay .eye {
+  content: url("images/icon-view.svg");
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: auto;
+}
+
+.overlayPar:hover .imgOverlay {
+  display: flex;
+  cursor: pointer;
+}
+
+.product-title {
+  padding-top: 1em;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--white);
+}
+.product-title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+.description {
+  padding-top: 1em;
+  font-size: 1em;
+  font-family: "Outfit", sans-serif;
+  font-weight: 100;
+}
+.price-day {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.price,
+.day,
+.creator {
+  display: flex;
+  align-items: center;
+}
+.price img,
+.day img {
+  padding-right: 0.5em;
+}
+.price p {
+  color: var(--cyan);
+}
+hr {
+  margin: 1em 0 1em 0;
+  border-color: var(--dark-blue-line);
+}
+.creator .avatar {
+  width: 2em;
+  line-height: 0;
+  margin: 5px;
+  border: 0.1em solid var(--white);
+  border-radius: 50%;
+}
+.creator p {
+  padding-left: 0.5em;
+  font-size: 0.9em;
+}
+.creator a {
+  text-decoration: none;
+  color: var(--white);
+}
+.creator a:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
